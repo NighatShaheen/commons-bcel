@@ -647,7 +647,7 @@ public final class Const {
      * @see <a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.4"> The Constant Pool in The
      *      Java Virtual Machine Specification</a>
      */
-    public static final byte CONSTANT_Integer = 3;
+    public static final byte CONSTANT_INTEGER = 3;
 
     /**
      * Marks a constant pool entry as type Float: {@value}.
