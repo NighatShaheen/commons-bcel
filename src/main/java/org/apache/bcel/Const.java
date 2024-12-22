@@ -655,7 +655,7 @@ public final class Const {
      * @see <a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.4"> The Constant Pool in The
      *      Java Virtual Machine Specification</a>
      */
-    public static final byte CONSTANT_Float = 4;
+    public static final byte CONSTANT_FLOAT= 4;
 
     /**
      * Marks a constant pool entry as type Long: {@value}.
@@ -719,7 +719,7 @@ public final class Const {
      * @see <a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.6"> The Constant Pool in The
      *      Java Virtual Machine Specification</a>
      */
-    public static final byte CONSTANT_NameAndType = 12;
+    public static final byte CONSTANT_NAMEANDTYPE = 12;
 
     /**
      * Marks a constant pool entry as a Method Handle: {@value}.
