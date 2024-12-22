@@ -634,7 +634,7 @@ public final class Const {
      * @see <a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.7"> The Constant Pool in The
      *      Java Virtual Machine Specification</a>
      */
-    public static final byte CONSTANT_Utf8 = 1;
+    public static final byte CONSTANT_UTF8 = 1;
 
     /*
      * The description of the constant pool is at: https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4
