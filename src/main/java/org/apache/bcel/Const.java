@@ -735,7 +735,7 @@ public final class Const {
      * @see <a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.4.9"> The Constant Pool in The
      *      Java Virtual Machine Specification</a>
      */
-    public static final byte CONSTANT_MethodType = 16;
+    public static final byte CONSTANT_METHODTYPE = 16;
 
     /**
      * Marks a constant pool entry as dynamically computed: {@value}.
