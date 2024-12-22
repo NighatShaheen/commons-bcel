@@ -744,7 +744,7 @@ public final class Const {
      *      Java Virtual Machine Specification</a>
      * @since 6.3
      */
-    public static final byte CONSTANT_Dynamic = 17;
+    public static final byte CONSTANT_DYNAMIC = 17;
 
     /**
      * Marks a constant pool entry as an Invoke Dynamic: {@value}.
