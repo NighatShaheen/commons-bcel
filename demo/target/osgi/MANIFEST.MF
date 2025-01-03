@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 17
+Bundle-Description: Apache Commons Bytecode Engineering Library
+Bundle-DocURL: https://commons.apache.org/proper/commons-bcel/demo
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: demo
+Bundle-SymbolicName: org.apache.bcel
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin 5.1.9
+Export-Package: org.apache.bcel;version="1.0.0.SNAPSHOT"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-6.4.1.202306080939

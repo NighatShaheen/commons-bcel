@@ -1,0 +1,75 @@
+
+*****************************************************
+Summary
+-------
+Generated at: 2025-01-04T00:33:55+01:00
+
+Notes: 0
+Binaries: 0
+Archives: 0
+Standards: 2
+
+Apache Licensed: 0
+Generated Documents: 0
+
+JavaDocs are generated, thus a license header is optional.
+Generated files do not require license headers.
+
+2 Unknown Licenses
+
+*****************************************************
+
+Files with unapproved licenses:
+
+  C:/Users/User/Documents/GitHub/commons-email/commons-bcel/demo/pom.xml
+  C:/Users/User/Documents/GitHub/commons-email/commons-bcel/demo/src/main/java/org/apache/bcel/Main.java
+
+*****************************************************
+
+*****************************************************
+  Files with Apache License headers will be marked AL
+  Binary files (which do not require any license headers) will be marked B
+  Compressed archives will be marked A
+  Notices, licenses etc. will be marked N
+ !????? C:/Users/User/Documents/GitHub/commons-email/commons-bcel/demo/pom.xml
+ !????? C:/Users/User/Documents/GitHub/commons-email/commons-bcel/demo/src/main/java/org/apache/bcel/Main.java
+ 
+*****************************************************
+
+ Printing headers for text files without a valid license header...
+ 
+=====================================================
+== File: C:/Users/User/Documents/GitHub/commons-email/commons-bcel/demo/pom.xml
+=====================================================
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+          <groupId>org.apache.bcel</groupId>
+          <artifactId>bcel</artifactId>
+          <version>6.10.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>org.apache.bcel</groupId>
+    <artifactId>demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+</project>
+
+=====================================================
+== File: C:/Users/User/Documents/GitHub/commons-email/commons-bcel/demo/src/main/java/org/apache/bcel/Main.java
+=====================================================
+package org.apache.bcel;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+    }
+}
