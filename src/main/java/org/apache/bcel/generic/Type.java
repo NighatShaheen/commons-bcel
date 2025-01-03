@@ -14,60 +14,50 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.apache.bcel.generic;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
 
 import org.apache.bcel.Const;
-import org.apache.bcel.classfile.ClassFormatException;
-import org.apache.bcel.classfile.InvalidMethodSignatureException;
-import org.apache.bcel.classfile.Utility;
-import org.apache.commons.lang3.StringUtils;
 
-/**
- * Abstract super class for all possible Java types, namely basic types such as int, object types like String and array
- * types, e.g. int[]
- */
 public abstract class Type {
 
-    /**
-     * Predefined constants
-     */
-    public static final BasicType VOID = new BasicType(Const.T_VOID);
+    // Predefined constants for basic types
+    public static final Type VOID = createBasicType(Const.T_VOID);
+    public static final Type BOOLEAN = createBasicType(Const.T_BOOLEAN);
+    public static final Type INT = createBasicType(Const.T_INT);
+    public static final Type SHORT = createBasicType(Const.T_SHORT);
+    public static final Type BYTE = createBasicType(Const.T_BYTE);
+    public static final Type LONG = createBasicType(Const.T_LONG);
+    public static final Type DOUBLE = createBasicType(Const.T_DOUBLE);
+    public static final Type FLOAT = createBasicType(Const.T_FLOAT);
+    public static final Type CHAR = createBasicType(Const.T_CHAR);
 
-    public static final BasicType BOOLEAN = new BasicType(Const.T_BOOLEAN);
-    public static final BasicType INT = new BasicType(Const.T_INT);
-    public static final BasicType SHORT = new BasicType(Const.T_SHORT);
-    public static final BasicType BYTE = new BasicType(Const.T_BYTE);
-    public static final BasicType LONG = new BasicType(Const.T_LONG);
-    public static final BasicType DOUBLE = new BasicType(Const.T_DOUBLE);
-    public static final BasicType FLOAT = new BasicType(Const.T_FLOAT);
-    public static final BasicType CHAR = new BasicType(Const.T_CHAR);
-    public static final ObjectType OBJECT = new ObjectType("java.lang.Object");
-    public static final ObjectType CLASS = new ObjectType("java.lang.Class");
-    public static final ObjectType STRING = new ObjectType("java.lang.String");
-    public static final ObjectType STRINGBUFFER = new ObjectType("java.lang.StringBuffer");
-    public static final ObjectType THROWABLE = new ObjectType("java.lang.Throwable");
+    // Predefined constants for object types
+    public static final Type OBJECT = createObjectType("java.lang.Object");
+    public static final Type CLASS = createObjectType("java.lang.Class");
+    public static final Type STRING = createObjectType("java.lang.String");
+    public static final Type STRINGBUFFER = createObjectType("java.lang.StringBuffer");
+    public static final Type THROWABLE = createObjectType("java.lang.Throwable");
 
-    /**
-     * Empty array.
-     */
+    // Empty array and special types
     public static final Type[] NO_ARGS = {};
-    public static final ReferenceType NULL = new ReferenceType() {
-    };
+    public static final ReferenceType NULL = new ReferenceType() {};
+    public static final Type UNKNOWN = new Type(Const.T_UNKNOWN, "<unknown object>") {};
 
-    public static final Type UNKNOWN = new Type(Const.T_UNKNOWN, "<unknown object>") {
-    };
+    private static final ThreadLocal<Integer> CONSUMED_CHARS = ThreadLocal.withInitial(() -> 0);
 
-    private static final ThreadLocal<Integer> CONSUMED_CHARS = ThreadLocal.withInitial(() -> Integer.valueOf(0));
+    // Utility methods to initialize types without direct subclass access
+    private static BasicType createBasicType(byte type) {
+        return new BasicType(type);
+    }
 
-    // int consumed_chars=0; // Remember position in string, see getArgumentTypes
+    private static ObjectType createObjectType(String className) {
+        return new ObjectType(className);
+    }
+
     static int consumed(final int coded) {
         return coded >> 2;
     }
+}
+
 
     static int encode(final int size, final int consumed) {
         return consumed << 2 | size;
